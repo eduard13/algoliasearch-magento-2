@@ -489,6 +489,9 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 				header: '<div class="name">' + (facet.label ? facet.label : facet.attribute) + '</div>',
 				item: $('#refinements-lists-item-template').html()
 			};
+			if (facet.attribute === 'in_stock') {
+				templates.item = $('#refinements-lists-item-template-in-stock').html()
+			}
 			
 			var widgetInfo = customAttributeFacet[facet.attribute] !== undefined ?
 				customAttributeFacet[facet.attribute](facet, templates) :
