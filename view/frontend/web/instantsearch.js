@@ -371,6 +371,8 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 					limit: algoliaConfig.maxValuesPerFacet,
 					templates: templates,
 					sortBy: ['name:asc'],
+					collapsible: true,
+					collapsed: true,
 					cssClasses: {
 						list: 'hierarchical',
 						root: 'facet hierarchical'
@@ -404,6 +406,8 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 						button: algoliaConfig.translations.go
 					},
 					templates: templates,
+					collapsible: true,
+					collapsed: true,
 					cssClasses: {
 						root: 'facet conjunctive'
 					}
@@ -418,6 +422,8 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 					operator: 'and',
 					templates: templates,
 					sortBy: ['count:desc', 'name:asc'],
+					collapsible: true,
+					collapsed: true,
 					cssClasses: {
 						root: 'facet conjunctive'
 					}
@@ -436,6 +442,8 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 					operator: 'or',
 					templates: templates,
 					sortBy: ['count:desc', 'name:asc'],
+					collapsible: true,
+					collapsed: true,
 					cssClasses: {
 						root: 'facet disjunctive'
 					}
@@ -453,6 +461,8 @@ requirejs(['algoliaBundle','Magento_Catalog/js/price-utils'], function(algoliaBu
 					container: facet.wrapper.appendChild(createISWidgetContainer(facet.attribute)),
 					attributeName: facet.attribute,
 					templates: templates,
+					collapsible: true,
+					collapsed: true,
 					cssClasses: {
 						root: 'facet slider'
 					},
